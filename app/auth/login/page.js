@@ -12,7 +12,7 @@ export default function LoginPage() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/auth/login`, { email, password });
+      const response = await axios.post(`https://book-catalog-backend-red-eight.vercel.app/api/auth/login`, { email, password });
       localStorage.setItem('token', response.data.token); // Save token to local storage
       router.push('/books');
     } catch (error) {
