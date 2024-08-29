@@ -22,7 +22,7 @@ export default function AddBookPage() {
     e.preventDefault();
     try {
       await axios.post(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/books`,
+        `https://book-catalog-backend-red-eight.vercel.app/api/books`,
         { title, author },
         {
           headers: {

@@ -19,7 +19,7 @@ export default function BooksPage() {
 
     const fetchBooks = async () => {
       try {
-        const response = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/books`, {
+        const response = await axios.get(`https://book-catalog-backend-red-eight.vercel.app/api/books`, {
           headers: {
             Authorization: `Bearer ${storedToken}`,
           },
@@ -39,7 +39,7 @@ export default function BooksPage() {
   const toggleFavorite = async (id) => {
     try {
       await axios.post(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/books/toggle-favorite`,
+        `https://book-catalog-backend-red-eight.vercel.app/api/books/toggle-favorite`,
         { id },
         {
           headers: {

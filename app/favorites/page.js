@@ -18,7 +18,7 @@ export default function FavoritesPage() {
     const fetchFavoriteBooks = async () => {
       if (storedToken) {
         try {
-          const response = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/books/favorite`, {
+          const response = await axios.get(`https://book-catalog-backend-red-eight.vercel.app/api/books/favorite`, {
             headers: {
               Authorization: `Bearer ${storedToken}`,
             },
